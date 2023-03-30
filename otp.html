@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gererate OTP</title>
+</head>
+
+<body>
+
+    <!-- get OTP button -->
+    <button onclick="generateOTP()">Get OTP</button>
+
+    <!-- get OTP in p tag -->
+    <p id="otpCode"></p>
+
+    <input type="text"> <br><br>
+    <input type="week" /> <br><br>
+    <input type="month"> <br><br>
+    <input type="datetime-local"> <br><br>
+    <input type="date"> <br><br>
+    <input type="time"> <br><br>
+    <input type="range"> <br><br>
+    <input type="radio">
+    <input type="checkbox"> <br><br>
+    <input type="file"> <br><br>
+
+    <script>
+        function generateOTP() {
+            let OTP = '';
+
+            // generate a 6-digit OTP
+            for (let i = 0; i < 6; i++) {
+                OTP += Math.floor(Math.random() * 10);
+            }
+
+            // display the OTP on the web page
+            document.getElementById("otpCode").innerHTML = "OTP Code" + " " + OTP;
+        }
+    </script>
+
+</body>
+
+</html>
